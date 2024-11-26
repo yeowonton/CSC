@@ -1,11 +1,22 @@
 ---
 import BoardMember from "../components/BoardMember.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const boardCollection = await getCollection("board");
 ---
 
-<MainLayout>
+<MainLayout name="board">
     <h1>Board Members</h1>
-    <BoardMember name="Member 1" position="Lead Sentirist" picture="https://i.imgur.com/wCp4tjO.png"></BoardMember>
-    <BoardMember name="Member 2" position="Lead Sentirist" picture="https://i.imgur.com/wCp4tjO.png"></BoardMember>
-    <BoardMember name="Member 3" position="Lead Sentirist" picture="https://i.imgur.com/wCp4tjO.png"></BoardMember>
+    {
+        boardCollection.map(member => (
+            <BoardMember
+                name={member.data.name}
+                position={member.data.position}
+                alt={member.data.picture.description}
+                picture={member.data.picture.image}
+            />
+        ))
+    }
 </MainLayout>

@@ -9,9 +9,10 @@ const imageSchema = ({ image }: SchemaContext) =>
 
 
 const galleryCollection = defineCollection({
+  type: 'data',
   schema: (image: SchemaContext) => z.object({
     title: z.string(),
-    image: imageSchema(image),
+    picture: imageSchema(image),
   }),
 });
 
