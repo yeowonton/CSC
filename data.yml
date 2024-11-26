@@ -1,0 +1,30 @@
+board:
+  - name: Yavor Kolev
+    position: Head of Sigma Wolf Strategy Customer Approval Acceptance
+    picture: https://i.imgur.com/wCp4tjO.png
+  - name: Stanley Sigma
+    position: Lead Sentirage Development Officer of Global Sentirage
+    picture: https://i.imgur.com/wCp4tjO.png
+  - name: Ryan Park
+    position: Cheif Skibidi Officer
+    picture: https://i.imgur.com/wCp4tjO.png
+current_events:
+  - name: Skibidi Dom Dom Yes???
+    description: We skibidi them all!!
+    date: 6/09/6969
+  - name: Sentirage Development Meeting
+    description: We will discuss strategies for developing our sentirage program
+    date: 6/09/6969
+  - name: Skibidi Toiler Watch Party
+    description: We will watch the entirety of skibidi toilet in one day
+    date: 6/09/6969
+  - name: LOREM IPSUM DOREM DAT SKIBIDI WHAT LOREM DOM DOM
+    description: LOREM IPSUM FR FR
+    date: 6/09/6969
+gallery:
+  - https://i.imgur.com/wCp4tjO.png
+  - https://i.imgur.com/wCp4tjO.png
+  - https://i.imgur.com/wCp4tjO.png
+  - https://i.imgur.com/wCp4tjO.png
+  - https://i.imgur.com/wCp4tjO.png
+  - https://i.imgur.com/wCp4tjO.png
