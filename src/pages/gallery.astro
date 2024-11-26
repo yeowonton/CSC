@@ -11,7 +11,7 @@ const galleryCollection = await getCollection("gallery");
     {
       galleryCollection.map(entry => (
         <li>
-          <p>{entry.data.title}<p/>
+          <p>{entry.data.title}</p>
           <Image src={entry.data.picture.image} alt={entry.data.picture.description} width="160"/>
         </li>
       ))
