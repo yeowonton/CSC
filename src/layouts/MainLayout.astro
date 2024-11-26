@@ -10,11 +10,11 @@ const { name } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} /></head>
   <body>
-    <Header active=name />
-    <h1>{{ name }}</h1>
-    <article>
+    <Header/>
+    <h1>{name}</h1>
+    <main>
       <slot /> <!-- your content is injected here -->
-    </article>
+    </main>
     <Footer />
   </body>
 </html>
