@@ -9,12 +9,16 @@ const galleryCollection = await getCollection("gallery");
 <MainLayout name="gallery">
   <ul class="list-none grid gap-4 grid-cols-4">
     {
-      galleryCollection.map(entry => (
+      galleryCollection.map((entry) => (
         <li>
           <p>{entry.data.title}</p>
-          <Image src={entry.data.picture.image} alt={entry.data.picture.description} width="160"/>
+          <Image
+            src={entry.data.picture.image}
+            alt={entry.data.picture.description}
+            width="160"
+          />
         </li>
       ))
     }
   </ul>
-<MainLayout />
+</MainLayout>
