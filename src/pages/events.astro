@@ -1,0 +1,22 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Event from "../components/Event.astro";
+import { getCollection } from "astro:content";
+const events = await getCollection("events");
+---
+
+<MainLayout name="events">
+  <ul class="grid grid-cols-3 gap-2 justify-center p-1">
+    {
+      events.map((event) => (
+        <li class="*:h-full">
+          <Event
+            name={event.data.name}
+            description={event.data.description}
+            date={event.data.date}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>
