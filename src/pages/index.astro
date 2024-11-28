@@ -1,16 +1,17 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro"
+import { Image } from 'astro:assets';
+import logo from "../assets/logo.jpg"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<MainLayout name="Dermatology Club Website">
+<Image src={logo} alt="Dermatology Club Logo" width=500 />
+<h1>Club Activities:</h1>
+<ul>
+	<li>We talk about the anatomy of the skin topically and internally.</li>
+	<li>We talk about the prevention of skin cancer and other types of skin diseases.</li>
+	<li>We let people participate in fun activities such as giveaways, as well as monthly potlucks.</li>
+	<li>People can come to express concerns about their skin and we will provide them with aesthetic insights as well as chemical insights.</li>
+</ul>
+</MainLayout>
