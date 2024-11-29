@@ -7,12 +7,14 @@ const underlined = (target: string) =>
   "hover:underline" + (page == target ? " underline" : "");
 ---
 
-<header class="bg-white">
+<header class="fixed top-0 left-0 w-full bg-white">
   <nav
     class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
     aria-label="Global"
   >
-    <a class="hover:underline" href="/">Dermatology Club</a>
+    <a class="hover:underline font-display text-5xl" href="/"
+      >Dermatology Club</a
+    >
 
     <ul class="flex flex-row gap-4">
       <li><a class={underlined("events")} href="/events">Events</a></li>
@@ -21,3 +23,4 @@ const underlined = (target: string) =>
     </ul>
   </nav>
 </header>
+<div class="p-6"></div>
