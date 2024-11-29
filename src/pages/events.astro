@@ -9,7 +9,7 @@ const events = await getCollection("events");
   <ul class="grid grid-cols-3 gap-2 justify-center p-4">
     {
       events.map((event) => (
-        <li class="*:h-full bg-white">
+        <li>
           <Event
             name={event.data.name}
             description={event.data.description}
