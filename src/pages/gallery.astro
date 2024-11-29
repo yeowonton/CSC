@@ -4,21 +4,35 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const galleryCollection = await getCollection("gallery");
+
+let chunks = []
+for (let i = 0; i < galleryCollection.length; i += 4) {
+  const chunk = galleryCollection.slice(i, i + galleryCollection.length/4 );
+  chunks.push(chunk)
+}
+console.log(chunks)
 ---
 
 <MainLayout name="gallery">
-  <ul class="list-none grid gap-4 grid-cols-4">
-    {
-      galleryCollection.map((entry) => (
-        <li>
-          <p>{entry.data.title}</p>
-          <Image
-            src={entry.data.picture.image}
-            alt={entry.data.picture.description}
-            width="160"
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div class="text-center space-y-4">
+    <h1 class="text-4xl font-bold">Gallery</h1>
+    <ul class="flex flex-row gap-4 justify-center">
+      {
+        chunks.map((chunk) => (
+          <ul class="flex flex-col gap-4">
+            {chunk.map((entry) => (
+              <li>
+                {/* <p>{entry.data.title}</p> */}
+                <Image
+                  src={entry.data.picture.image}
+                  alt={entry.data.picture.description}
+                  width="160"
+                />
+              </li>
+            ))}
+          </ul>
+        ))
+      }
+    </ul>
+  </div>
 </MainLayout>
