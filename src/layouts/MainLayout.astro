@@ -29,6 +29,16 @@ const { name } = Astro.props;
           "opsz" 48,
           "wght" 745;
       }
+      @font-face {
+        font-family: 'latin_modern_roman10_regular';
+        src: url('/fonts/latin-modern-10.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    html {
+      font-family: 'latin_modern_roman10_regular', serif, sans-serif;
+    }
+
     </style>
   </head>
   <body>

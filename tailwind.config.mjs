@@ -13,6 +13,7 @@ export default {
 			},
 			fontFamily: {
       	display: ['mon-nicolette-variable', ...defaultTheme.fontFamily.serif],
+      	serif: ['latin_modern_roman10_regular', ...defaultTheme.fontFamily.serif],
       }
 		},
 	},
