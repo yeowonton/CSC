@@ -9,8 +9,8 @@ const { name, description, date } = Astro.props;
 date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 ---
 
-<div class="p-8 rounded-lg border-black border-2">
-  <p>{name}</p>
+<div class="p-4 rounded-lg border-black border-2">
+  <p class="font-bold">{name}</p>
   <p>{description}</p>
   <time datetime={date.toISOString()}>
     {
