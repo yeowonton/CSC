@@ -11,11 +11,8 @@ interface Props {
 
 const { name, position, picture, alt } = Astro.props;
 ---
-
-<div class="flex flex-row">
-	<Image src={picture} alt={alt ?? `Image of ${name}`} width="160" />
-	<div class="flex flex-col">
-		<h1>{name}</h1>
-		<p>{position}</p>
+<div class="flex items-center justify-center m-5">
+	<div class="flex p-5 rounded-lg border border-black-300 shadow-lg">
+		<Image src={picture} alt={alt ?? `Image of ${name}`} width="600" />
 	</div>
 </div>

@@ -8,15 +8,16 @@ const boardCollection = await getCollection("board");
 ---
 
 <MainLayout name="board">
-    <h1>Board Members</h1>
-    {
-        boardCollection.map(member => (
-            <BoardMember
-                name={member.data.name}
-                position={member.data.position}
-                alt={member.data.picture.description}
-                picture={member.data.picture.image}
-            />
-        ))
-    }
+    <h1 class="font-serif text-center text-9xl">Our Board Members</h1>
+        {
+            boardCollection.map(member => (
+                <BoardMember
+                    name={member.data.name}
+                    position={member.data.position}
+                    alt={member.data.picture.description}
+                    picture={member.data.picture.image}
+                />
+            ))
+        }
+    </div>
 </MainLayout>
