@@ -10,12 +10,14 @@ const galleryCollection = await getCollection("gallery");
   <!-- <ul class="list-none grid gap-4 grid-cols-4"> -->
     {
       galleryCollection.map((entry) => (
-        <div class="inline-block ">
+        <div class="inline-block justify-center m-5">
+          <div class="flex p-5 rounded-lg border border-black-300 shadow-lg bg-white">
             <Image
-            src={entry.data.picture.image}
-            alt={entry.data.picture.description}
-            width="400"
-          />
+              src={entry.data.picture.image}
+              alt={entry.data.picture.description}
+              width="400"
+            />
+          </div>
         </div>
       ))
     }
