@@ -6,7 +6,7 @@ export default {
 			colors: {
 				mainBackground: {
 					light: "#91f9e5",
-					dark: "#499167",
+					dark: "#5FDD9D",
 				}
 			}
 		},
