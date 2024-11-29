@@ -13,8 +13,24 @@ const { name } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} /></head
-  >
+    <meta name="generator" content={Astro.generator} />
+    <style is:global>
+      @font-face {
+        font-family: "mon-nicolette-variable";
+        src:
+          url("/fonts/mon-nicolette.woff2") format("woff2"),
+          url("/fonts/mon-nicolette.woff") format("woff"),
+          url("/fonts/mon-nicolette.otf") format("opentype");
+        font-display: auto;
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-variation-settings:
+          "opsz" 48,
+          "wght" 745;
+      }
+    </style>
+  </head>
   <body>
     <Header page={name} />
     <main class="bg-gradient-to-r from-mainBackground-light to-mainBackground-dark p-8">
