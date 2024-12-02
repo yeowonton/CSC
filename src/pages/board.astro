@@ -8,7 +8,7 @@ const boardCollection = await getCollection("board");
 ---
 
 <MainLayout name="board">
-    <h1 class="text-center text-4xl font-display">Our Board Members</h1>
+    <u style="color:#F28482;"><h1 style="color:#F28482;" class="text-center text-4xl font-display">Our Board Members</h1></u>
     <div class="flex flex-row flex-wrap justify-center">
         {
             boardCollection.map(member => (
