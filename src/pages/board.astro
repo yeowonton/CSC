@@ -8,17 +8,17 @@ const boardCollection = await getCollection("board");
 ---
 
 <MainLayout name="board">
-    <u style="color:#F28482;"><h1 style="color:#F28482;" class="text-center text-4xl font-display">Our Board Members</h1></u>
-    <div class="flex flex-row flex-wrap justify-center">
-        {
-            boardCollection.map(member => (
-                <BoardMember
-                    name={member.data.name}
-                    position={member.data.position}
-                    alt={member.data.picture.description}
-                    picture={member.data.picture.image}
-                />
-            ))
-        }
-    </div>
+  <u><h1 class="text-center text-4xl font-display">Our Board Members</h1></u>
+  <div class="flex flex-row flex-wrap justify-center">
+    {
+      boardCollection.map((member) => (
+        <BoardMember
+          name={member.data.name}
+          position={member.data.position}
+          alt={member.data.picture.description}
+          picture={member.data.picture.image}
+        />
+      ))
+    }
+  </div>
 </MainLayout>
