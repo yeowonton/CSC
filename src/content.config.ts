@@ -1,4 +1,5 @@
 import { z, defineCollection } from 'astro:content'
+import { glob } from 'astro/loaders';
 import type { SchemaContext } from 'astro:content'
 
 const imageSchema = ({ image }: SchemaContext) =>
@@ -9,15 +10,15 @@ const imageSchema = ({ image }: SchemaContext) =>
 
 
 const galleryCollection = defineCollection({
-  type: 'data',
-  schema: (image: SchemaContext) => z.object({
+    loader: glob({ pattern: '**/[^_]*.yaml', base: "./src/content/gallery" }),
+    schema: (image: SchemaContext) => z.object({
     title: z.string(),
     picture: imageSchema(image),
   }),
 });
 
 const boardCollection = defineCollection({
-  type: 'data',
+    loader: glob({ pattern: '**/[^_]*.yaml', base: "./src/content/board" }),
   schema: (image: SchemaContext) => z.object({
     name: z.string(),
     position: z.string(),
@@ -26,8 +27,8 @@ const boardCollection = defineCollection({
 });
 
 const eventCollection = defineCollection({
-  type: 'data',
-  schema: z.object({
+    loader: glob({ pattern: '**/[^_]*.yaml', base: "./src/content/events" }),
+    schema: z.object({
     name: z.string(),
     date: z.date(),
     description: z.string()
